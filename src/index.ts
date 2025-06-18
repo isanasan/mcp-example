@@ -16,6 +16,17 @@ server.tool(
   ({num}) => ({content: [{type: "text", text: (num * 2).toString()}]}),
 );
 
+server.tool(
+  "get_test_text",
+  "テスト用の文字列データを取得する",
+  {},
+  async () => {
+    const resp = await fetch("http://localhost:53151/test");
+    const body = await resp.text();
+    return {content: [{type: "text", text: body}]};
+  },
+);
+
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);

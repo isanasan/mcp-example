@@ -1,0 +1,9 @@
+{
+    "servers": {
+        "mcp-example": {
+            "type": "stdio",
+            "command": "./build/index.js",
+            "args": []
+        }
+    }
+}

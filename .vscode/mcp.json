@@ -1,8 +1,8 @@
 {
     "servers": {
-        "mcp-example": {
+        "mcp-example-stdio": {
             "type": "stdio",
-            "command": "./build/index.js",
+            "command": "./tutorial/build/index.js",
             "args": []
         }
     }
